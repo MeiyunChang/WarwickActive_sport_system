@@ -1,0 +1,129 @@
+/* Reset some default styles */
+body, h1, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* General body style */
+body {
+    font-family: 'Bree Serif', serif;
+    background-color: #f4f7fa; /* 使用主頁的淺灰色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header style */
+.header {
+    width: 100%;
+    padding: 20px;
+    background-color: #173d5a;
+    text-align: left;
+    position: fixed; /* 固定在頂部 */
+    top: 0;
+    left: 0;
+    z-index: 100; /* 確保 header 在最上層 */
+}
+
+.home-link {
+    text-decoration: none;
+    color: #f0f6fc; /* 白色字體 */
+    font-size: 18px;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/* Booking container */
+.booking-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 36px;
+    color: #212529; /* 深色字體 */
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 18px;
+    color: #555;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff; /* 深藍色主題色 */
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #007bff; /* 深藍色主題色 */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* hover時顏色變深 */
+}
+
+/* Flash messages */
+.flashes {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8d7da; /* 淡紅色背景 */
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Message at the bottom */
+.message {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.message a {
+    color: #007bff; /* 深藍色主題色 */
+    text-decoration: underline;
+}
+
+.message a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}

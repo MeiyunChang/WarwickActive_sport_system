@@ -1,0 +1,338 @@
+.body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.body header {
+    display: flex;
+    align-items: center;
+    background-color: #e6e7e2;
+    margin: 0;
+    color:#072823;
+    font-size: 25px;
+    font-family: 'Bree Serif', serif;
+}
+
+.body header img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e7e2;
+    padding: 10px;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Bree Serif', serif;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: flex-end; /* put navbar-links to the right */
+    align-items: center;
+}
+
+.navbar-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #173d5a;
+    font-weight: bold;
+}
+
+.navbar-links .navbar-link:not(:last-child)::after {
+    content: " /";
+    margin-right: 1px;
+    margin-left: 1px; 
+}
+
+.navbar-dropdown {
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    white-space: nowrap;
+    position: fixed;
+    top: 135px; 
+    left: 210px; 
+    z-index: 100; 
+    background-color: #173d5a; 
+    border: 10px solid #173d5a; 
+    padding: 10px; 
+    line-height: 2; 
+}
+
+.dropdown-content a{
+    text-decoration: none; 
+    color: whitesmoke; 
+}
+
+.dropdown-content a:hover {
+    background-color: #173d5a;
+    color: #52b322;
+    padding: 8px;
+}
+
+.navbar-dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-search-input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 2px solid #173d5a; 
+    border-radius: 5px; 
+}
+
+.navbar-search-button {
+    padding: 8px 15px;
+    background-color: #173d5a;
+    color: #fff;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+/* facilities Section Styles */
+.page-section.facilities {
+    background-color: #173d5a; 
+    padding: 10px 0; 
+    margin: 0;
+}
+
+.page-section.facilities h2{
+    color: #369fc7;
+}
+
+.page-section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    margin-bottom: 10px; 
+    margin-top: 10px;
+    font-size: 50px;
+    color:#343a40;
+    font-family: 'Bree Serif', serif;
+}
+
+.divider-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    margin: 30px 0;
+}
+
+.divider-custom-icon {
+    font-size: 1.5em; 
+    margin: 0 auto; 
+    color: whitesmoke; 
+}
+
+.row.justify-content-center {
+    margin-top: 30px; 
+}
+
+/* Portfolio Item Styles */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-item-caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .portfolio-item-caption {
+    opacity: 1;
+}
+
+.portfolio-item-caption-content {
+    font-size: 2em; 
+}
+
+.img-fluid {
+    width: 50%; 
+    height: auto; 
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover .img-fluid {
+    transform: scale(1.1); 
+}
+
+/* Map Styles */
+.page-section {
+    background-color: #e6e7e2;
+    padding: 20;
+    box-sizing: border-box;
+    min-height: 100;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.page-section-heading {
+    display: flex;
+    text-align: right; 
+    align-items: right;
+    color: #173d5a;
+    white-space: nowrap;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-left: 50; 
+    padding-left: 50;
+    padding-right: 50;
+    text-align: middle;
+}
+
+.map-container {
+    border: 5px solid #52b322;
+    padding: 10px;
+    border-radius: 10px;
+    width: 500;
+    height: 570;
+    margin-right: 100;
+    flex-grow: 1;
+}
+
+.map-text {
+    display: flex;
+    color: #343a40;
+    font-size: 25px;
+    font-family: 'Bree Serif', serif;
+    position: relative;
+    margin-bottom: 20;
+}
+
+.locationpic {
+    margin-top: 30;
+    margin-left: 30;
+    margin-right: 50;
+    margin-bottom: 30;
+}
+
+.locationpic ul, li {
+    list-style: none;
+}
+
+/* Contact me Styles */
+.contact-section {
+    background-color: #173d5a;
+    padding: 80px 0;
+    margin-bottom: 0;
+}
+
+.container3 {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Bree Serif', serif;
+}
+
+.contact-heading {
+    color: #e6e7e2;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 400px;
+}
+
+.contact-info {
+    margin-top: 30px;
+    color: #e6e7e2;
+    flex: 1;
+    max-width: 300px;
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+.social-media {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #e6e7e2;
+    flex: 1;
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.social-media h3 {
+    color: #52b322;
+    font-size: 30px;
+    margin-bottom: 50px; 
+}
+
+.social-media ul li a i {
+    font-size: 350%; 
+    color: #52b322; 
+}
+
+.social-media ul {
+    padding: 0;
+    list-style: none; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 40px; 
+}
+
+.footer {
+    margin-top: auto; 
+    text-align: center; 
+    color: #173d5a; 
+    font-size: 15px;
+    background-color: #e6e7e2; 
+    padding: 10px; 
+    width: 100%; 
+    position: fixed; 
+    bottom: 0; 
+}
