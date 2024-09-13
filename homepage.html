@@ -1,0 +1,150 @@
+<! DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/homepage.css">
+        <title>WarwickActive</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://kit.fontawesome.com/90a5887115.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+    <header>
+        <img src="/static/images/icon.png" alt="icon" width="150">
+        <h1><strong>Welcome to WarwickActive</strong></h1>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet"> 
+    </header>
+
+  <!-- Navigation-->
+  <nav class="navbar">
+    <div class="navbar-links">
+        <a href="/login" class="navbar-link">My account</a>
+        <a href="#" class="navbar-link">Classes & Programs</a>
+        <a href="/onlinebooking" class="navbar-link">Events Booking</a>
+
+       <li class="navbar-dropdown">
+           <a href="#Facilities" class="navbar-link">Facilities</a>
+
+            <ul class="dropdown-content">
+                <li><a href="#Gym">Gym Session</a></li>
+                <li><a href="#Swimming">Swimming Pool</a></li>
+                <li><a href="#Climbing">Climbing Walls</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </li>
+    </div>
+    <div class="navbar-search">
+        <input type="search" class="navbar-search-input">
+        <button type="button" class="navbar-search-button">Search</button>
+    </div>
+</nav>
+
+</body>    
+<section class="page-section facilities" id="facilities">
+    <div class="container1">
+        <!-- facilities Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="Facilities">LET'S GET MOVING !</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+        </div>
+
+        <!-- facilities Grid Items-->
+        <div class="row justify-content-center">
+            <!-- Restaurant Item 1-->
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img class="img-fluid" src="/static/images/gym.png" alt="gym in Warwick" />
+                </div>
+        <!-- Restaurant Item 2-->
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid" src="/static/images/swimming.png" alt="swimming pool in Warwick" />
+            </div>
+        </div>
+        <!-- Restaurant Item 3-->
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid" src="/static/images/climbing.png" alt="climbing walls in Warwick" />
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Map Section-->
+        <section class="page-section">
+            <div class="container2">
+                <h2 class="page-section-heading" id="monthly">HOW TO FIND US</h2>
+                <div class="divider-custom">
+                    <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+                </div>
+            </div>
+
+                <div class="right-container">
+                    <div class="map-container">
+                        <div class="map-text">Location</div>
+                        <iframe class="map"
+                        width="500"
+                        height="500"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d861.1108137504606!2d-1.5716643977750993!3d52.377868780648136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48774b94cf2bfa79%3A0xdcfc3b01eb15b2ff!2sSports%20and%20Wellness%20Hub!5e0!3m2!1szh-TW!2stw!4v1726167997152!5m2!1szh-TW!2stw"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <div class="locationpic">
+                        <ul>
+                            <li>
+                                <img class="locationpic" src="/static/images/location.png" alt="sport center" width="100%">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Contact Us Section-->
+        <section class="contact-section">
+            <div class="container3">
+                <h2 class="contact-heading" id="contact">Contact Us</h2>
+                <div class="divider-custom">
+                    <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+                </div>
+    
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p><strong><i class="fa-solid fa-phone"></i> Phone:</strong> +44-123-456-7890</p>
+                        <p><strong><i class="fa-solid fa-envelope"></i> Email:</strong> warwickactive@warwick.com</p>
+                        <p><strong><i class="fa-solid fa-location-dot"></i> Address:</strong> Gibbet Hill Rd, Coventry CV4 7AL</p>
+                        <p><strong><i class="fa-solid fa-business-time"></i> Business Hours:</strong> Monday - Friday: 9 AM - 5 PM</p>
+                    </div>
+    
+                    <div class="social-media">
+                        <h3 class="contact-heading"><i class="fa-solid fa-heart"></i> Get Social</h3>
+                        <ul>
+                            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa-brands fa-square-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer">
+            <p>&copy; 2024 WarwickActive. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

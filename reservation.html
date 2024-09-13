@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/reservation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet"> 
+    <title>Event Booking Page</title>
+</head>
+
+<body>
+    <header class="header">
+        <a class="home-link" href="/homepage">&#8592; Back to Home</a>
+    </header>
+
+    <div class="booking-container">
+        <section class="booking-form">
+            <h2>Events Booking</h2>
+            <form action="{{ url_for('reservation_page') }}" method="POST">
+                <label for="event_name">Select an Event:</label>
+                <select id="event_name" name="event_name" required>
+                    <option value="Community Football">Community Football</option>
+                    <option value="Community Volleyball">Community Volleyball</option>
+                    <option value="Wellbeing Run">Wellbeing Run</option>
+                </select>
+
+                <label for="booking_date">Booking Date:</label>
+                <input type="date" id="booking_date" name="booking_date" required>
+
+                <label for="time_slot">Time Slot:</label>
+                <select id="time_slot" name="time_slot" required>
+                    <option value="11:00 - 13:00">11:00 - 13:00</option>
+                    <option value="14:00 - 16:00">14:00 - 16:00</option>
+                    <option value="18:00 - 20:00">18:00 - 20:00</option>
+                </select>
+
+                <label for="customer_name">Your Name:</label>
+                <input type="text" id="customer_name" name="customer_name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="notes">Additional Requests:</label>
+                <textarea id="notes" name="notes"></textarea>
+
+                <button type="submit">Book Now</button>
+            </form>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </section>
+
+        <section class="reservation-list">
+            <h2>My Booking</h2>
+            {% if recent_reservation %}
+                <div class="reservation-item">
+                    <p><strong>Event:</strong> {{ recent_reservation.event_name }}</p>
+                    <p><strong>Time:</strong> {{ recent_reservation.booking_time }}</p>
+                    <p><strong>Name:</strong> {{ recent_reservation.customer_name }}</p>
+                    <p><strong>Email:</strong> {{ recent_reservation.email }}</p>
+                    <p><strong>Notes:</strong> {{ recent_reservation.notes }}</p>
+                </div>
+            {% else %}
+                <p>No recent booking.</p>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>
